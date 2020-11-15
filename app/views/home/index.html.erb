@@ -47,9 +47,9 @@
                 <li class="list-group-item d-flex justify-content-between lh-condensed">
                 <div>
                   <h6 class="my-0">Socio <%= v.member %></h6>
-                   <small class="text-muted"><%= v.full_name %></small>
+                   <small class="text-muted"><%= v.last_name.titleize %></small>
                 </div>
-                <span class="text-muted"><%= v.created_at.strftime("%d/%m/%Y %H:%M") %></span>
+                <span class="text-muted"><%= v.created_at.strftime("%d/%m/%Y") %></span>
               </li>
 
               <% end %>
