@@ -14,6 +14,8 @@ module Juanguadalmina
 	config.i18n.available_locales = [:es, :en]
 	config.i18n.default_locale = :es
 	
+  config.assets.initialize_on_precompile = false
+  
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
