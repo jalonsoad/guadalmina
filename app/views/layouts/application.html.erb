@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Microsite de apoyo a Juan Hernández</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+      <%= favicon_link_tag asset_path('icon.png') %>
+
+  </head>
+
+  <body>
+        <%= render 'layouts/header' %>
+
+        <%= render 'layouts/messages' %>
+  
+         <main role="main">
+          <%= yield %>
+       </main>
+       <!-- /main -->
+
+       <%= render 'layouts/footer' %>
+
+  </body>
+</html>
