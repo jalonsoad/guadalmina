@@ -138,8 +138,8 @@
                 <% @allvotes.each do |v| %>
                 <tr>
                   <td><%= v.id %></td>
-                  <td><%= v.first_name.capitalize %></td>
-                  <td><%= v.last_name.capitalize %></td>
+                  <td><%= v.first_name.titleize %></td>
+                  <td><%= v.last_name.titleize %></td>
                   <td><%= v.member %></td>
                   <td><%= v.created_at.strftime("%d/%m/%Y  %H:%M") %></td>
                 </tr>
