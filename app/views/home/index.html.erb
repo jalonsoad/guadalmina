@@ -34,13 +34,14 @@
        
       </div>
 
-<!--
+
       <div class="row">
         <div class="col-md-4 order-md-2 mb-4">
           <h4 class="d-flex justify-content-between align-items-center mb-3">
             <span class="text-muted"><%= t(:totalvotes) %></span>
             <span class="badge badge-secondary badge-pill"><%= @allvotes.count %></span>
           </h4>
+          <!--
           <span class="text-muted"><%= t(:lastvoters) %></span>
           <ul class="list-group mb-3">
             <div class="text-success">
@@ -58,13 +59,14 @@
           </div>
             
           </ul>
+        -->
 
         
         </div>
--->
 
 
-        <div class="col-md-12 order-md-1">
+
+        <div class="col-md-8 order-md-1">
           <h4 class="mb-3"> <%= t(:getyourdata) %></h4>
 
 
@@ -75,23 +77,33 @@
         <%= bootstrap_form_for(Vote.new ,label_errors: true, inline_errors: true) do |f| %>
       
             <div class="row">
-              <div class="col-md-4 mb-3">
+              <div class="col-md-6 mb-3">
                 <%= f.text_field :first_name,  label:  t(:firstname), help: t(:mandatory)  %>
                 <%= f.alert_message "Please fix the errors below." %>
-               
-              </div>
-              <div class="col-md-4 mb-3">
-                 <%= f.text_field :last_name,  label: t(:lastname) , help: t(:mandatory) %>
-                
-              </div>
-            
-               <div class="col-md-2 mb-3">
-                   <%= f.text_field :member,  label:  t(:member), help: t(:mandatory)  %>
-                 
+                <div class="invalid-feedback">
+                  EL nombre es obligatorio
                 </div>
-                <div class="col-md-2 mb-3">
+              </div>
+              <div class="col-md-6 mb-3">
+                 <%= f.text_field :last_name,  label: t(:lastname) , help: t(:mandatory) %>
+                <div class="invalid-feedback">
+                  Valid last name is required.
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+               <div class="col-md-6 mb-3">
+                   <%= f.text_field :member,  label:  t(:member), help: t(:mandatory)  %>
+                  <div class="invalid-feedback">
+                    Valid last name is required.
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
                   <%= f.text_field :cif,  label: "CIF/NIE", help:  t(:mandatory) %>
-                 
+                  <div class="invalid-feedback">
+                    Valid first name is required.
+                  </div>
                 </div>
                
               </div>
