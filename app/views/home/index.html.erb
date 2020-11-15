@@ -4,45 +4,43 @@
        <div class="py-2 text-center">
         <img class="d-block mx-auto mb-4" src="https://www.guadalminagolf.com/imggolf/logoguadalmina.png" alt="logo guadalmina" >
         <h2><%= t(:title).upcase %></h2>
-        <p class="lead">Estamos recogiendo firmas para la readmisión de Juan Hernández en la plantilla de nuestro club. Si estás de acuerdo con los puntos expuestos a continuación, por favor, déjanos tus datos n el formulario y se lo haremos llegar a la junta directiva.</p>
+        <p class="lead"><%= t(:paragraph1) %></p>
       </div>
 
 
     <div class="my-3 p-3 bg-white rounded box-shadow">
-        <h6 class="border-bottom border-gray pb-2 mb-0">Principales puntos que solicitamos</h6>
+        <h6 class="border-bottom border-gray pb-2 mb-0"><%= t(:mainpoints) %></h6>
         <div class="media text-muted pt-3">
           <img data-src="holder.js/32x32?theme=thumb&bg=007bff&fg=007bff&size=1" alt="" class="mr-2 rounded">
           <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-            <strong class="d-block text-gray-dark">Transaparencia</strong>
-            Que se informe a los socios de una manera clara y concisa el motivo del despido de Juan Hernández.
+            <strong class="d-block text-gray-dark"><%= t(:transparency) %></strong>
+            <%= t(:transparencytext) %>
           </p>
         </div>
         <div class="media text-muted pt-3">
           <img data-src="holder.js/32x32?theme=thumb&bg=e83e8c&fg=e83e8c&size=1" alt="" class="mr-2 rounded">
           <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-            <strong class="d-block text-gray-dark">Orden del día</strong>
-            Que se incorpore este tema en el orden del día de la próxima junta extraordinaria que se celebrará el 9/10 de Diciembre de 2020.
+            <strong class="d-block text-gray-dark"><%= t(:order) %></strong>
+            <%= t(:ordertext) %>
           </p>
         </div>
         <div class="media text-muted pt-3">
           <img data-src="holder.js/32x32?theme=thumb&bg=6f42c1&fg=6f42c1&size=1" alt="" class="mr-2 rounded">
           <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-            <strong class="d-block text-gray-dark">Readmisión</strong>
-            En el caso que las justificaciones no sean de la mayoría de los socios, solicitar la inmediata readminisión de Juan Hernández a la plantilla.
+            <strong class="d-block text-gray-dark"><%= t(:admission) %></strong>
+            <%= t(:admissiontext) %>
           </p>
         </div>
        
       </div>
 
- 
-
       <div class="row">
         <div class="col-md-4 order-md-2 mb-4">
           <h4 class="d-flex justify-content-between align-items-center mb-3">
-            <span class="text-muted">Total  votos recibidos</span>
+            <span class="text-muted"><%= t(:totalvotes) %></span>
             <span class="badge badge-secondary badge-pill"><%= @allvotes.count %></span>
           </h4>
-          <span class="text-muted">Ultimos votantes</span>
+          <span class="text-muted"><%= t(:lastvoters) %></span>
           <ul class="list-group mb-3">
             <div class="text-success">
               <% @lastfivevotes.each do |v| %>
@@ -51,7 +49,7 @@
                   <h6 class="my-0">Socio <%= v.member %></h6>
                    <small class="text-muted"><%= v.full_name %></small>
                 </div>
-                <span class="text-muted"><%= v.created_at.strftime("%d/%m/%Y") %></span>
+                <span class="text-muted"><%= v.created_at.strftime("%d/%m/%Y %H:%M") %></span>
               </li>
 
               <% end %>
@@ -64,7 +62,7 @@
         </div>
 
         <div class="col-md-8 order-md-1">
-          <h4 class="mb-3">Por favor, introduce tus datos</h4>
+          <h4 class="mb-3"> <%= t(:getyourdata) %></h4>
 
 
   <%= flash_messages %>
@@ -75,14 +73,14 @@
       
             <div class="row">
               <div class="col-md-6 mb-3">
-                <%= f.text_field :first_name,  label: "Nombre", help: "Obligatorio" %>
+                <%= f.text_field :first_name,  label:  t(:firstname), help: t(:mandatory)  %>
                 <%= f.alert_message "Please fix the errors below." %>
                 <div class="invalid-feedback">
                   EL nombre es obligatorio
                 </div>
               </div>
               <div class="col-md-6 mb-3">
-                 <%= f.text_field :last_name,  label: "Apellidos", help: "Obligatorio" %>
+                 <%= f.text_field :last_name,  label: t(:lastname) , help: t(:mandatory) %>
                 <div class="invalid-feedback">
                   Valid last name is required.
                 </div>
@@ -91,13 +89,13 @@
 
             <div class="row">
                <div class="col-md-6 mb-3">
-                   <%= f.text_field :member,  label: "Número de socio", help: "Obligatorio"  %>
+                   <%= f.text_field :member,  label:  t(:member), help: t(:mandatory)  %>
                   <div class="invalid-feedback">
                     Valid last name is required.
                   </div>
                 </div>
                 <div class="col-md-6 mb-3">
-                  <%= f.text_field :cif,  label: "CIF/NIE", help: "Obligatorio" %>
+                  <%= f.text_field :cif,  label: "CIF/NIE", help:  t(:mandatory) %>
                   <div class="invalid-feedback">
                     Valid first name is required.
                   </div>
@@ -106,12 +104,12 @@
               </div>
 
 
-              <label>Los datos proporcionados en este formulario se utilizarán solo y exclusivamente para el propósito expuesto anteriormente.</label>
+              <label><%= t(:alldata) %></label>
            
 
           
            
-                <%= f.button  "Enviar datos", :class=> "btn btn-primary btn-lg btn-block text-center" %>
+                <%= f.button   t(:senddata), :class=> "btn btn-primary btn-lg btn-block text-center" %>
 
       <% end %>
         </div>
@@ -124,16 +122,16 @@
 
        <main role="main" class="col-md-9 ml-sm-auto col-lg-12">
 
-          <h2>Socios que han votado hasta ahora</h2>
+          <h2><%= t(:members) %></h2>
           <div class="table-responsive">
             <table class="table table-striped table-sm">
               <thead>
                 <tr>
                   <th>#</th>
-                  <th>Nombre</th>
-                  <th>Apellidos</th>
-                  <th>Núm Socio</th>
-                  <th>Fecha</th>
+                  <th><%= t(:firstname) %></th>
+                  <th><%= t(:lastname) %></th>
+                  <th><%= t(:member) %></th>
+                  <th><%= t(:date) %></th>
                 </tr>
               </thead>
               <tbody>
@@ -143,7 +141,7 @@
                   <td><%= v.first_name.capitalize %></td>
                   <td><%= v.last_name.capitalize %></td>
                   <td><%= v.member %></td>
-                  <td><%= v.created_at.strftime("%d/%m/%Y") %></td>
+                  <td><%= v.created_at.strftime("%d/%m/%Y  %H:%M") %></td>
                 </tr>
                 <%end %>
                
