@@ -1,4 +1,6 @@
 
+
+
  
     <div class="container">
        <div class="py-2 text-center">
@@ -8,193 +10,78 @@
       </div>
 
 
+<!--
+
       <div class="container">
        <div class="py-2 text-center">
         <p class="lead"><%= t(:totalvotes) %>: <%= @allvotes.count %></p>
       </div>
+-->
 
+ <div class="row">
+    <div class="col-md-12 blog-main">
+      <h3 class="pb-4 mb-4 font-italic border-bottom text-center">
+      </h3>
 
-    <div class="my-3 p-3 bg-white rounded box-shadow">
-        <h6 class="border-bottom border-gray pb-2 mb-0"><%= t(:mainpoints) %></h6>
-        <div class="media text-muted pt-3">
-          <img data-src="holder.js/32x32?theme=thumb&bg=007bff&fg=007bff&size=1" alt="" class="mr-2 rounded">
-          <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-            <strong class="d-block text-gray-dark"><%= t(:transparency) %></strong>
-            <%= t(:transparencytext) %>
-          </p>
-        </div>
-        <div class="media text-muted pt-3">
-          <img data-src="holder.js/32x32?theme=thumb&bg=e83e8c&fg=e83e8c&size=1" alt="" class="mr-2 rounded">
-          <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-            <strong class="d-block text-gray-dark"><%= t(:order) %></strong>
-            <%= t(:ordertext) %>
-          </p>
-        </div>
-        <div class="media text-muted pt-3">
-          <img data-src="holder.js/32x32?theme=thumb&bg=6f42c1&fg=6f42c1&size=1" alt="" class="mr-2 rounded">
-          <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-            <strong class="d-block text-gray-dark"><%= t(:admission) %></strong>
-            <%= t(:admissiontext) %>
-          </p>
-        </div>
-       
-      </div>
-
-  <!--
-      <div class="row">
-        <div class="col-md-4 order-md-2 mb-4">
-          <h4 class="d-flex justify-content-between align-items-center mb-3">
-            <span class="text-muted"><%= t(:totalvotes) %></span>
-            <span class="badge badge-secondary badge-pill"><%= @allvotes.count %></span>
-          </h4>
+      <div class="blog-post">
+        <blockquote>
+          <p> Muchos socios de este Club hemos tenido conocimiento del despido disciplinario del que ha sido objeto el Caddie Master del mismo <strong>Don Juan Hernández Reina</strong>. Esta inesperada noticia nos ha llegado por medio de informaciones verbales a través de personas próximas al entorno de los miembros de la Junta Directiva y después se fue extendiendo a la generalidad de los socios. Este sistema de comunicación  de un hecho tan relevante en la vida del Club ha originado que algunos socios llegáramos a pensar que esa decisión se fundaba en que nuestro Caddie Master  se hubiera podido apropiar indebidamente de fondos del Club.
         
-          <span class="text-muted"><%= t(:lastvoters) %></span>
-          <ul class="list-group mb-3">
-            <div class="text-success">
-              <% @lastfivevotes.each do |v| %>
-                <li class="list-group-item d-flex justify-content-between lh-condensed">
-                <div>
-                  <h6 class="my-0">Socio <%= v.member %></h6>
-                   <small class="text-muted"><%= v.last_name.titleize %></small>
-                </div>
-                <span class="text-muted"><%= v.created_at.strftime("%d/%m/%Y") %></span>
-              </li>
+        </blockquote>
 
-              <% end %>
-            
-          </div>
-            
-          </ul>
-        -->
+
+         <p>Ante esta alarma social que afecta a la honorabilidad del Sr. Hernández y a su vida profesional, familiar y social, algunos socios hemos creído conveniente averiguar las causas reales del despido. Una vez conocida esta información, no precisamente a través de la Dirección del Club o de su Junta Directiva,  hemos comprobado con alivio que al <strong>Sr. Hernández no se le acusa de haberse quedado con fondos de nuestra Sociedad</strong>, sino de otros hechos, a los que luego aludiremos, que son a nuestro modo de ver injustificados.</p>
+
+         <p>La figura del Caddie Master, a falta de regulación legal, enmarca tradicionalmente sus funciones no solo en las propiamente organizativas, deportivas y de control del personal a su cargo, <strong>sino también en otras que son de carácter representativo del propio Club ante sus socios y personas que lo visitan</strong>. Así ocurre en los casos de las llamadas  “correspondencias” o “derechos recíprocos”  para la utilización de sus instalaciones y servicios y guardan especial relevancia estas atribuciones del Caddie Master en la aplicación y decisión sobre concesión de “cortesías” con ciertos colectivos, tales como profesionales de golf, presidentes, gerentes y directivos de otros clubes, miembros de federaciones territoriales y de la Real Federación Española de Golf y a los propios socios del Club en aquellos casos que lo juzgue conveniente por alguna razón especial.</p>
+
+         <p>Siendo ésta una praxis habitual en el mundo del golf, no se puede entender que las decisiones adoptadas por el Sr. Hernández por la concesión de green fees o cesión de buggies de cortesía a determinadas personas (hechos en los que se funda el despido y que tuvieron lugar entre el 22 de septiembre y el 6 de noviembre del 2020) puedan calificarse por la Junta Directiva como actos contrarios a la buena fe contractual y  constitutivos de deslealtad o abuso de confianza, ya que:</p>
+        <ul>
+          <li>Su conducta personal y profesional durante toda su trayectoria laboral en nuestro Club ha sido intachable y goza del reconocimiento generalizado de los socios.</li>
+          <li>Los hechos que se le imputan forman parte del ámbito de las funciones que tiene encomendadas y las viene realizando desde siempre sin reproche alguno por parte de la Dirección del Club o su Junta Directiva, y </li>
+          <li><strong>La cantidad que supuestamente dejó de ingresar el Club y de la que el Sr. Hernández en ningún caso se lucró personalmente (535€)</strong> resulta insignificante en las cuentas de la sociedad, máxime tratándose de una entidad deportiva sin ánimo de lucro que se nutre fundamentalmente de las cuotas de sus socios.</li>
+        </ul>
+        <p>Pero si consideramos el despido del Sr. Hernández Reina  injustificado en cuanto al fondo, más rechazable es si cabe la forma en que se ha llevado a efecto y ello, por las siguientes razones:</p>
+        <p>a.- Por la propagación de rumores sobre las causas del cese distintas a las expresadas en la carta de despido, creando así una corriente de opinión favorable a la decisión disciplinaria adoptada, y</p>
+        <p>b.- Por haber investigado su conducta utilizando para ello con fines disciplinarios <strong><em>cámaras de grabación sin conocimiento ni autorización del interesado ni de los representantes de los trabajadores</em></strong>, hecho que en sí mismo puede constituir la violación del derecho constitucional a su intimidad, cuya consecuencia puede igualmente dar lugar no solo a la nulidad de las pruebas así obtenidas,  sino a la declaración de nulidad del despido por parte de los tribunales.</p>
+        <p>En atención a todo lo hasta aquí expuesto, es  propósito de algunos socios acudir a la Asamblea General del Club convocada para el próximo día 10 de diciembre a fin de  solicitar en ella que la Junta Directiva proceda a dejar sin efecto la decisión disciplinaria adoptada respecto del Sr. Hernández y acuerde su inmediata readmisión como Caddie Master del Club y en caso contrario, exigir a sus miembros la responsabilidad personal y directa por todos los gastos e indemnizaciones que recaigan sobre el Club como consecuencia de su decisión si, como creemos, se excede de las atribuciones que le otorga el art. 30 de los Estatutos Sociales que solamente le autoriza a sancionar al personal si es procedente.</p>
+        
+        <p>Antes que ésta han circulado otras dos plataformas dirigidas al Sr. Presidente del Club, apoyadas por varios cientos de socios en las que manifestaban su oposición al despido  del Sr. Hernández y solicitaban  la inclusión de este punto en el orden del día de la próxima Asamblea.</p>
+        <p>La celeridad con que la Junta Directiva ha accedido a incluir este asunto en el punto 10 del Orden del Día, <strong>“Ruegos y preguntas” como “Informe detallado del despido de personal laboral y propuesta de ratificación o retracto en su caso”</strong>, así como la labor que viene desplegando para conseguir la representación y delegación de voto de  socios, nos induce a pensar en la posibilidad de que tales votos pudieran ser utilizados para ratificar la decisión disciplinaria adoptada respecto del Sr. Hernández.</p>
+        <p>Si así fuera, la buena fe de los socios que apoyaron las anteriores plataformas podría verse defraudada si la inclusión del punto antes mencionado en el orden del día y su votación en la Asamblea llegara a producir el efecto contrario al deseado por ellos, que no era otro que dejar sin efecto el despido del Sr. Hernández.</p>
+        <p>Por esta razón y con el fin de oponernos al despido  del Sr. Hernández y pedir su readmisión, solicitamos la representación y la delegación de voto de todos aquellos socios que coincidan con este propósito y que podrán otorgarla en favor de cualquiera de las personas que se señalan en la <strong>PAPELETA DE REPRESENTACION Y DELEGACION DE VOTO</strong> que se acompaña y los interesados, suscribirla y enviarla a la siguiente dirección de correo electrónico <%= mail_to "apoyoajuan2020@gmail.com", "apoyoa2020juan@gmail.com"%> o entregarla  personalmente en el caddy master.</p>
+
+
+         <p>En los siguientes enlaces puedes descargar tanto el documento enviado a la junta directiva como la delegación de voto</a></p>
+
+   
+
+
+
+          <p><%= link_to 'Descarga el documento enviado a la junta', root_path << '../../download/escrito_junta_directiva_guadalmina.pdf' %> </p>
+
+
+          <p><%= link_to 'Descarga la delegación de voto', root_path << '../../download/delegacion_voto.pdf' %> y envíala al siguiente email: <%= mail_to "apoyoajuan@gmail.com", "apoyoajuan@gmail.com"%></p>
+
+
+              <aside class="col-md-12 blog-sidebar">
+      <div class="p-4 mb-3 bg-light rounded">
+        <h4 class="font-italic">Recuerda</h4>
 
         
-        </div>
 
-
-
-        <div class="col-md-12 order-md-1">
-          <h4 class="mb-3"> <%= t(:getyourdata) %></h4>
-
-
-  <%= flash_messages %>
-
-
-
-        <%= bootstrap_form_for(Vote.new ,label_errors: true, inline_errors: true) do |f| %>
-      
-            <div class="row">
-              <div class="col-md-6 mb-3">
-                <%= f.text_field :first_name,  label:  t(:firstname), help: t(:mandatory)  %>
-                <%= f.alert_message "Please fix the errors below." %>
-                <div class="invalid-feedback">
-                  EL nombre es obligatorio
-                </div>
-              </div>
-              <div class="col-md-6 mb-3">
-                 <%= f.text_field :last_name,  label: t(:lastname) , help: t(:mandatory) %>
-                <div class="invalid-feedback">
-                  Valid last name is required.
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-               <div class="col-md-6 mb-3">
-                   <%= f.text_field :member,  label:  t(:member), help: t(:mandatory)  %>
-                  <div class="invalid-feedback">
-                    Valid last name is required.
-                  </div>
-                </div>
-                <div class="col-md-6 mb-3">
-                  <%= f.text_field :cif,  label: "CIF/NIE", help:  t(:mandatory) %>
-                  <div class="invalid-feedback">
-                    Valid first name is required.
-                  </div>
-                </div>
-               
-              </div>
-
-            
-
-                  <label text-center><%= t(:alldata) %></label>
-               
-           
-
-          
-           
-                <%= f.button   t(:senddata), :class=> "btn btn-primary btn-lg btn-block text-center" %>
-
-      <% end %>
-        </div>
+        <p class="mb-0">Descarga la delegación de voto y envíala firmada a  <em>apoyoajuan2020@gmail.com</em> </p>
       </div>
+    </aside>
 
 
- 
+    </div><!-- /.blog-main -->
+
+
+  </div><!-- /.row -->
+
 
      <hr class="mb-4">
 
 
-<!--
-       <main role="main" class="col-md-9 ml-sm-auto col-lg-12">
-
-          <h2><%= t(:members) %></h2>
-          <div class="table-responsive">
-            <table class="table table-striped table-sm">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th><%= t(:firstname) %></th>
-                  <th><%= t(:lastname) %></th>
-                  <th><%= t(:member) %></th>
-                  <th><%= t(:date) %></th>
-                </tr>
-              </thead>
-              <tbody>
-                <% @allvotes.each do |v| %>
-                <tr>
-                  <td><%= v.id %></td>
-                  <td><%= v.first_name.titleize %></td>
-                  <td><%= v.last_name.titleize %></td>
-                  <td><%= v.member %></td>
-                  <td><%= v.created_at.strftime("%d/%m/%Y  %H:%M") %></td>
-                </tr>
-                <%end %>
-               
-              </tbody>
-            </table>
-          </div>
-        </main>
-
-      -->
-
-  </div>
-
-   
-    </div>
 
 
-
-      <!--CHECK OUT  Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>
-      // Example starter JavaScript for disabling form submissions if there are invalid fields
-      (function() {
-        'use strict';
-
-        window.addEventListener('load', function() {
-          // Fetch all the forms we want to apply custom Bootstrap validation styles to
-          var forms = document.getElementsByClassName('needs-validation');
-
-          // Loop over them and prevent submission
-          var validation = Array.prototype.filter.call(forms, function(form) {
-            form.addEventListener('submit', function(event) {
-              if (form.checkValidity() === false) {
-                event.preventDefault();
-                event.stopPropagation();
-              }
-              form.classList.add('was-validated');
-            }, false);
-          });
-        }, false);
-      })();
-    </script>
